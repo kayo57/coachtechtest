@@ -19,6 +19,7 @@ class Contact extends Model
         'fullname',
         'gender',
         'address',
+        'email',
         'building_name'
     ];
     public static $rules = array(

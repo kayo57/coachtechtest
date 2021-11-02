@@ -11,33 +11,39 @@
 
 
   @section('content')
-  <form action="/contact/create" method="POST">
-    @csrf
 
 
 
-    <div class="box">
+  <div class="box">
+    <form action="/contact/create" method="POST">
+      @csrf
 
       <div class="card">
         <p class="title">お問い合わせ</p>
 
 
+
+
         <div class="contact">
+
 
 
           <div class="fullname">
 
+
+
+
+
             <tr>
+
               <td>お名前 ※</td>
               <th>
-                <form method="post" action="/contact/create">
-                  @csrf
-                  <input type="txet" class="input-add" name="fullname" value="{{old('fullname')}}">
+
+                <input type="txet" class="input-add" name="fullname" value="{{old('fullname')}}">
               </th>
               <th>
-                <form method="post" action="/contact/create">
-                  @csrf
-                  <input type="txet" class="input-add" name="fullname" value="{{old('fullname')}}">
+
+                <input type="txet" class="input-add" name="fullname" value="{{old('fullname')}}">
               </th>
 
               <p>例）山田</p>
@@ -75,11 +81,10 @@
           <div class="email">
             <tr>
               <td>メールアドレス ※</td>
-              <form method="post" action="/contact/create">
-                @csrf
-                <input type="email" class="email" name="email" value="{{old('email')}}">
 
-                <p>例）test@example.com</p>
+              <input type="email" class="email" name="email" value="{{old('email')}}">
+
+              <p>例）test@example.com</p>
             </tr>
 
 
@@ -96,11 +101,10 @@
           <div class="postcode">
             <tr>
               <td>郵便番号 ※</td>
-              <form method="post" action="/contact/create">
-                @csrf
-                <input type="txet" class="" name="postcode" value="{{old('postcode')}}">
 
-                <p>例）123-456</p>
+              <input type="txet" class="" name="postcode" value="{{old('postcode')}}">
+
+              <p>例）123-456</p>
             </tr>
             @if ($errors->has('postcode'))
             <tr>
@@ -115,11 +119,10 @@
           <div class="address">
             <tr>
               <td>住所 ※</td>
-              <form method="post" action="/contact/create">
-                @csrf
-                <input type="txet" class="" name="address" value="{{old('address')}}">
 
-                <p>例）東京都渋谷千駄ヶ谷1-2-3</p>
+              <input type="txet" class="" name="address" value="{{old('address')}}">
+
+              <p>例）東京都渋谷千駄ヶ谷1-2-3</p>
             </tr>
             @if ($errors->has('address'))
             <tr>
@@ -134,20 +137,18 @@
           <div class="buil">
             <tr>
               <th>建物名</th>
-              <form method="post" action="/contact/create">
-                @csrf
-                <input type="txet" class="" name="buil" value="{{old('buil')}}">
 
-                <p>例） 千駄ヶ谷マンション101</p>
+              <input type="txet" class="" name="buil" value="{{old('buil')}}">
+
+              <p>例） 千駄ヶ谷マンション101</p>
             </tr>
           </div>
 
           <div class="opinion">
             <tr>
               <td>ご意見 ※</td>
-              <form method="post" action="/contact/create">
-                @csrf
-                <textarea name="opinion" id="" cols="30" rows="10"></textarea>
+
+              <textarea name="opinion" id="" cols="30" rows="10"></textarea>
 
 
 
@@ -162,25 +163,16 @@
             @endif
           </div>
           <!-------end.opinion-------->
-
-
-
-          <form method="post" action="/contact/create">
-            @csrf
-            <input type="submit" class="button" value="確認">
-
-          </form>
-
+          <input type="submit" class="button" value="確認">
         </div>
         <!-------end.contact---------->
 
-
-
       </div>
       <!--------end.card---------->
-    </div>
-    <!-----end.box------->
-  </form>
+    </form>
+
+  </div>
+  <!-----end.box------->
 </body>
 
 </html>

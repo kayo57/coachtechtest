@@ -16,10 +16,10 @@ class CreateContactsTable extends Migration
             $table->string('fullname');//名前
             $table->string('gender'); //性別(TRUE:男性 FALSE:女性)
             $table->string('email'); //メールアドレス
-            $table->integer('postcode,8');//郵便番号
+            $table->string('postcode',8);//郵便番号
             $table->string('address');     //住所
             $table->string('building_name');//建物
-            $table->text('opinion,120');   //ご意見
+            $table->text('opinion',120);   //ご意見
             $table->timestamp('created_at');
             $table->timestamp('updated_at');
         });
