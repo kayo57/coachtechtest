@@ -20,8 +20,8 @@ class CreateContactsTable extends Migration
             $table->string('address');     //住所
             $table->string('building_name');//建物
             $table->text('opinion,120');   //ご意見
-            $table->timestamp('created_at');->useCurrent()->nullable();
-            $table->timestamp('updated_at');->useCurrent()->nullable();
+            $table->timestamp('created_at');
+            $table->timestamp('updated_at');
         });
     }
 
