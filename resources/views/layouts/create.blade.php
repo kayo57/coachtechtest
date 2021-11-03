@@ -30,7 +30,7 @@ td {
 
 @section('contact')
 <table>
-  <form action="/contact/create" method="POST">
+  <form action="contact/create" method="POST">
     @csrf
     <tr>
       <th>fullname</th>

@@ -35,7 +35,7 @@ class ContactController extends Controller
         unset($form['_token']);
         //dd($form);
         Contact::create($form);
-        return redirect('/contact/create');
+        return redirect('/');
     }
 
     //public function create(Request $request)

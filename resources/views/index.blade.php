@@ -138,7 +138,7 @@
             <tr>
               <th>建物名</th>
 
-              <input type="txet" class="" name="buil" value="{{old('buil')}}">
+              <input type="txet" class="" name="building_name" value="{{old('building_name')}}">
 
               <p>例） 千駄ヶ谷マンション101</p>
             </tr>
