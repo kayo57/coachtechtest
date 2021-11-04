@@ -37,23 +37,12 @@ class ContactController extends Controller
         Contact::create($form);
         return redirect('/');
     }
-
-    //public function create(Request $request)
-    //{
-        //$param = [
-            //'fullname' => $request->fullname,
-            //'gender' => $request->gender,
-            //'email' => $request->email,
-            //'postcode' => $request->postcode,
-            //'address' => $request->address,
-            //'building_name' => $request ->building_name,
-            //'opinion' => $request->opinion
-            
-        //];
-        //DB::insert('insert into contacts (fullname, email, postcode, address, building_name, opinion) values (:fullname, :email, :postcode, :address, building_name, :opinion)', $param);
-        //return redirect('/');
-    //}
-
     
+	function confirm(Request $request){
+		//値を取り出す
+		$input = $request->all()->get("/");
+		return view("/contact/create");
+		
+	}	
 
 }
